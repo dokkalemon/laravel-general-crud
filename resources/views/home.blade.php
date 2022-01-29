@@ -6,7 +6,7 @@
            <img src="https://loghi-famosi.com/wp-content/uploads/2021/01/National-Basketball-Association-Logo.png" alt="">
        </div>
        <div class="buttons">
-           <a href=""><button class="btn btn-primary">VAI AL DATABASE</button></a>
+           <a href="{{route('players.index') }}"><button class="btn btn-primary">VAI AL DATABASE</button></a>
            <a href=""><button class="btn btn-secondary">INSERISCI UN GIOCATORE</button></a>
        </div>
     </section>
