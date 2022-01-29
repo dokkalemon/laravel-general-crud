@@ -25,7 +25,7 @@ class PlayersController extends Controller
      */
     public function create()
     {
-        //
+        return view('players.create');
     }
 
     /**
@@ -35,8 +35,21 @@ class PlayersController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        //
+    {   
+        //assegno i dati ad una variabile
+        $data = $request->all();
+
+        //creo una nuova istanza di Player
+        $new_player = new Player();
+
+        //confronto i dati per metterli nelle giuste colonne
+        $new_player->fill($data);
+
+        //salvo i dati
+        $new_player->save();
+
+        //redirect alla pagina show
+        return redirect()->route('players.show', $new_player->id);
     }
 
     /**

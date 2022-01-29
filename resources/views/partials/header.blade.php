@@ -14,7 +14,7 @@
                 <a class="nav-link active" aria-current="page" href="{{route('players.index')}}">Database</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Inserisci un Giocatore</a>
+                <a class="nav-link active" aria-current="page" href="{{route('players.create')}}">Inserisci un Giocatore</a>
               </li>
           </div>
         </div>
