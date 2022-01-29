@@ -16,6 +16,7 @@ main {
   flex-grow: 1;
   height: 100%;
   background-color: #c6c6c6;
+  overflow: auto;
 }
 
 nav {
@@ -24,4 +25,25 @@ nav {
 
 .debug {
   border: 1px solid red;
+}
+
+.home-main .img {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+.home-main .img img {
+  width: 70%;
+}
+.home-main .buttons {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.home-main .buttons button {
+  margin-bottom: 10px;
 }

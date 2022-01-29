@@ -15,7 +15,8 @@ body {
 main {
     flex-grow: 1;
     height: 100%;
-    background-color: rgb(198, 198, 198)
+    background-color: rgb(198, 198, 198);
+    overflow: auto;
 }
 
 nav {

@@ -1,0 +1,22 @@
+.home-main {
+    .img {
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        padding-top: 50px;
+        img {
+            width: 70%;
+        }
+    }
+    .buttons {
+        padding-top: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        button {
+            margin-bottom: 10px;
+        }
+    }
+}
