@@ -15,6 +15,13 @@ class CreatePlayersTable extends Migration
     {
         Schema::create('players', function (Blueprint $table) {
             $table->id();
+            $table->string('name', 50);
+            $table->string('last', 50);
+            $table->date('birth');
+            $table->float('height', 3, 2);
+            $table->string('team', 30);
+            $table->text('team-logo');
+            $table->tinyInteger('average-point')->unsigned();
             $table->timestamps();
         });
     }
