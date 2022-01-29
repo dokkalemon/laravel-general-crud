@@ -11,7 +11,7 @@
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Database</a>
+                <a class="nav-link active" aria-current="page" href="{{route('players.index')}}">Database</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Inserisci un Giocatore</a>

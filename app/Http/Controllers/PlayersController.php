@@ -46,8 +46,10 @@ class PlayersController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-    {
-        //
+    {   
+        $player = Player::find($id);
+        
+        return view('players.show', compact('player'));
     }
 
     /**

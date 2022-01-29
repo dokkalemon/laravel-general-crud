@@ -25,7 +25,7 @@
                     <td>{{ $player->team }}</td>                    
                     <td>{{ $player->average_point }}</td>                
                     <td>
-                        <a href=""><button class="btn btn-primary">SHOW</button></a>
+                        <a href="{{ route('players.show', $player->id) }}"><button class="btn btn-primary">SHOW</button></a>
                     </td>                
                     <td>
                         <a href=""><button class="btn btn-success">EDIT</button></a>
