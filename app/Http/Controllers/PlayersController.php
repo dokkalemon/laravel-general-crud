@@ -110,6 +110,6 @@ class PlayersController extends Controller
         $player->delete();
 
         //redirect alla index con il messaggio che il record è stato cancellato correttamente
-        return redirect()->route('players.index')->with('deleted', $player->name . $player->last);
+        return redirect()->route('players.index')->with('deleted', $player->name . ' ' . $player->last);
     }
 }
