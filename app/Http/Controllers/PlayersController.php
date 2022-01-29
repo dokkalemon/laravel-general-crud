@@ -103,6 +103,9 @@ class PlayersController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $player = Player::find($id);
+        $player->delete();
+
+        return redirect()->route('players.index')->with('deleted', $player->name . $player->last);
     }
 }

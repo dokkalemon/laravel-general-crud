@@ -23,7 +23,15 @@
                 <div class="col-12">
                     <a href="{{route('players.index')}}"><button class="btn btn-primary">BACK</button></a>
                     <a href=""><button class="btn btn-success">EDIT</button></a>
-                    <a href=""><button class="btn btn-danger">DELETE</button></a>
+                    
+                    <form action="{{ route('players.destroy', $player->id)}}" method="POST">
+                        @csrf
+
+                        @method('DELETE')
+                        <button class="btn btn-danger" type="submit">DELETE</button>
+
+                    </form>
+
                 </div>
                
             </div>

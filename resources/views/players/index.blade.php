@@ -4,6 +4,16 @@
     <section class="container mt-5">
         <h1>Basketball Players Database</h1>
 
+        @if (session('deleted'))
+        <div class="alert alert-success">
+            <strong>{{session('deleted')}}</strong>
+            è stato cancellato correttamente.
+
+        </div>
+        
+            
+       @endif
+
         <table class="table mt-2">
             <thead class="">
                 <tr>
@@ -31,8 +41,15 @@
                         <a href="{{route('players.edit', $player->id)}}"><button class="btn btn-success">EDIT</button></a>
                     </td>                
                     <td>
-                        <a href=""><button class="btn btn-danger">DELETE</button></a>
+                        <form action="{{ route('players.destroy', $player->id)}}" method="POST">
+                            @csrf
+    
+                            @method('DELETE')
+                            <button class="btn btn-danger" type="submit">DELETE</button>
+    
+                        </form>
                     </td>                
+                            
                 </tr>
             </thead>
             @endforeach
