@@ -103,9 +103,13 @@ class PlayersController extends Controller
      */
     public function destroy($id)
     {
+        //Assegnamo il record alla variabile Player
         $player = Player::find($id);
+
+        //cancelliamo il record tramite il metodo delete
         $player->delete();
 
+        //redirect alla index con il messaggio che il record è stato cancellato correttamente
         return redirect()->route('players.index')->with('deleted', $player->name . $player->last);
     }
 }
