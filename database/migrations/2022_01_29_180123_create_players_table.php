@@ -20,8 +20,9 @@ class CreatePlayersTable extends Migration
             $table->date('birth');
             $table->float('height', 3, 2);
             $table->string('team', 30);
-            $table->text('team-logo');
-            $table->tinyInteger('average-point')->unsigned();
+            $table->text('team_logo');
+            $table->text('photo');
+            $table->tinyInteger('average_point')->unsigned();
             $table->timestamps();
         });
     }
