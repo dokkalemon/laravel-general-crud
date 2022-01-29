@@ -72,8 +72,10 @@ class PlayersController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
-    {
-        //
+    {      
+        $player = Player::find($id);
+
+        return view('players.edit', compact('player'));
     }
 
     /**
@@ -85,7 +87,12 @@ class PlayersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = $request->all();
+        $player = Player::find($id);
+
+        $player->update($data);
+
+        return redirect()->route('players.show', $player->id);
     }
 
     /**

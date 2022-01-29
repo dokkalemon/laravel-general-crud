@@ -28,7 +28,7 @@
                         <a href="{{ route('players.show', $player->id) }}"><button class="btn btn-primary">SHOW</button></a>
                     </td>                
                     <td>
-                        <a href=""><button class="btn btn-success">EDIT</button></a>
+                        <a href="{{route('players.edit', $player->id)}}"><button class="btn btn-success">EDIT</button></a>
                     </td>                
                     <td>
                         <a href=""><button class="btn btn-danger">DELETE</button></a>

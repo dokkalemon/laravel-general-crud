@@ -7,7 +7,7 @@
        </div>
        <div class="buttons">
            <a href="{{route('players.index') }}"><button class="btn btn-primary">VAI AL DATABASE</button></a>
-           <a href=""><button class="btn btn-secondary">INSERISCI UN GIOCATORE</button></a>
+           <a href="{{route('players.create')}}"><button class="btn btn-secondary">INSERISCI UN GIOCATORE</button></a>
        </div>
     </section>
 @endsection
